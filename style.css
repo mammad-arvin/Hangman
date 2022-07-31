@@ -16,7 +16,7 @@ body {
    text-align: center;
    font-size: 1.8rem;
    font-family: Helvetica, Arial, sans-serif;
-   background-color: #181A1B;
+   background-color: #3d3e3f;
 }
 ::-webkit-scrollbar{
    display: none;
@@ -89,11 +89,7 @@ section#gameover div {
    }
 }
 @media(max-width:660px){
-   body{
-      background=#FFF;
-      color=#000;
-   }
- /*   #letters div {
+   #letters div {
       padding-top: 0.4em;
       width: 1.1em;
       height: 1.1em;
@@ -104,5 +100,5 @@ section#gameover div {
    }
    #showWord p {
       font-size: 2.2rem;
-   }*/
+   }
 }
