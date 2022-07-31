@@ -1,5 +1,3 @@
-/* WEB230 Final Project - Hangman Game */
-
 * {
    box-sizing: border-box;
 }
@@ -12,16 +10,21 @@ html {
 body {
    margin: 0;
    display: grid;
-   grid-template-rows: 6em auto 300px 6rem 2rem;
+   grid-template-rows: 3.6em auto 230px 8.5rem 2rem;
    align-content: flex-start;
    height: 100%;
    text-align: center;
-   font-size: 2rem;
+   font-size: 1.8rem;
    font-family: Helvetica, Arial, sans-serif;
+   background-color: #181A1B;
 }
-
+::-webkit-scrollbar{
+   display: none;
+}
 h1 {
+   margin-top: 20px;
    text-align: center;
+   color: #fff;
 }
 
 #letters {
@@ -36,45 +39,66 @@ h1 {
    margin: 5px;
    padding-top: 0.5em;
    border: 1px solid gray;
-   color: darkgreen;
+   color: rgb(255, 255, 255);
    width: 2em;
    height: 2em;
    line-height: 0.9;
    overflow: hidden;
+   transition: .3s;
 }
 
 #letters div:hover {
-   background-color: palegreen;
+   background-color: rgb(111, 126, 111);
 }
 
-#clue p {
+#showWord p {
    margin: 0;
    font-size: 3rem;
    letter-spacing: 0.5em;
    font-family: 'Comic Sans MS', sans-serif;
+   color: #fff;
 }
 
-/* 
-This class will grey out the letters as they are used. 
-Just add the class "used".
-*/
 #letters div.used {
-   background-color: lightgray;
+   background-color: rgb(146, 146, 146);
    opacity: 0.5;
 }
-
 section#image {
    text-align: center;
 }
-
-/* 
-Display the message when the game is over. 
-Hide it at the beginning. 
-*/
 section#gameover p {
-   text-align: center;
+   line-height: 30px;   
+   padding: 0 10px;
    font-size: 1rem;
+   cursor: pointer;
+   background-color: #02424c;
+   color: rgb(255, 255, 255);
    display: none;
 }
+section#gameover div {
+   display: flex;
+   justify-content: center;
+}
 
-/* WEB230 Final Project Winter 2021 */
+@media(max-width:885px){
+   #letters div {
+      padding-top: 0.5em;
+      width: 1.4em;
+      height: 1.4em;
+      line-height: 0.3;
+   }
+}
+@media(max-width:660px){
+   #letters div {
+      padding-top: 0.4em;
+      width: 1.1em;
+      height: 1.1em;
+      line-height: 0.2;
+   }
+   body {
+      grid-template-rows: 3em auto 240px 8rem 2rem;
+   }
+   #showWord p {
+      font-size: 2.2rem;
+   }
+}
