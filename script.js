@@ -4,7 +4,7 @@ const random=Math.random()*5;
 const randomWord=hamgWords[Math.floor(random)];
 console.log(randomWord);
 const showWordTag=document.querySelector("#showWord").firstElementChild;
-const showWordText=showWord.innerText.substring(0,randomWord.length);
+const showWordText=showWordTag.innerText.substring(0,randomWord.length);
 showWordTag.innerHTML=showWordText;
 let clicked=[];
 const hanging=document.querySelector('#image').querySelector('img');
